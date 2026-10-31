@@ -1,0 +1,5 @@
+Test suite: Python unittest
+Result: PASS
+Tests: 3
+Failures: 0
+Errors: 0

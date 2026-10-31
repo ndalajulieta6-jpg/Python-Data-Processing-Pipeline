@@ -1,0 +1,33 @@
+input:
+  type: csv
+  path: data/input/sample_customers.csv
+  url: ""
+
+output:
+  type: csv
+  path: data/output/processed_customers.csv
+
+processing:
+  drop_duplicates: true
+  required_columns:
+    - customer_id
+    - name
+    - email
+    - age
+    - monthly_spend
+    - signup_date
+
+  missing_values:
+    age: 0
+    monthly_spend: 0.0
+
+  numeric_columns:
+    - age
+    - monthly_spend
+
+  date_columns:
+    - signup_date
+
+logging:
+  level: INFO
+  file: logs/pipeline.log
